@@ -1,0 +1,11 @@
+print(10*5)
+print(10**2)
+print(15/10)
+print(15//10)
+print(-15//10)
+print(15%10)
+print(10%15)
+print(10%10)
+print(0%10)
+print(10/15)
+#The value of this will only show the whole numbers or integers, which is why the result will end up as 0
