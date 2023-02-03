@@ -2,7 +2,7 @@
 # CS110: Introduction to Programming Portfolio
 
 - Preferred Name: Michael Kim
-- Discord Username: Michael Kim
-- Github Username: MichaelKimBing
+- Discord Username: Imnotpsycho#1462 (Michael Kim)
+- Github Username: MichaelKimBing (mkim233@binghamton.edu)
 
 ![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg) by putting `https://gitpod.io/#` before your repo url.
