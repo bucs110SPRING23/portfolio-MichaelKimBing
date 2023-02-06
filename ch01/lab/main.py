@@ -4,9 +4,9 @@ classes = 5
 tuition = 6000
 cost_per_week = ((tuition / classes) / weeks)
 print("Cost per week:", cost_per_week)
-classes_per_week = 3
+classes_per_week = 8
 cost_per_class = cost_per_week/classes_per_week
-print("This is how much you spend per class:", cost_per_class)
+print("This is how much I spend per class:", cost_per_class)
 print(weeks, type(weeks))
 print(classes, type(classes))
 print(tuition, type(tuition))
