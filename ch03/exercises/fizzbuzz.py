@@ -14,3 +14,5 @@ for i in range(a+1):
         print("fizz")
     elif not i % 5:
         print("buzz")
+
+    print("Hi", "Goodbye", 456, sep='=')
