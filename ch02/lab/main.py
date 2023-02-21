@@ -48,7 +48,7 @@ window.exitonclick()
 #Part B:
 pygame.init()
 window = pygame.display.set_mode()
-side_length = int(100)
+side_length = int(300)
 screen_size = window.get_size()
 dimmensions1 = screen_size[0]/2
 dimmensions2 = screen_size[1]/2
