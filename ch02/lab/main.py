@@ -28,6 +28,8 @@ ford_turtle.goto(-100,20)
 ferrari_turtle.goto(-100,-20)
 
 #Race 2:
+ford_turtle.color("pink")
+ferrari_turtle.color("green")
 ford_turtle.goto(-100,20)
 ferrari_turtle.goto(-100,-20)
 for i in range(10):
@@ -47,8 +49,11 @@ window.exitonclick()
 pygame.init()
 window = pygame.display.set_mode()
 side_length = int(100)
-xpos = 960
-ypos = 540
+screen_size = window.get_size()
+dimmensions1 = screen_size[0]/2
+dimmensions2 = screen_size[1]/2
+xpos = dimmensions1
+ypos = dimmensions2
 window.fill("white")
 for num_sides in [3, 4, 6, 20, 100, 360]:
     points= []
