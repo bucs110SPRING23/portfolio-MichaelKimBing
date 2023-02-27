@@ -1,6 +1,5 @@
 import random
 numbers =  random.randint(1,10)
-print(numbers)
 
 for i in range(3):
     response = int(input("Please guess a number between 1-10: "))

@@ -1,4 +1,15 @@
-import turtle #1. import modules
+import t # 4. Pick up the pen so we don’t get lines
+leonardo.up()
+michelangelo.goto(-100,20)
+leonardo.goto(-100,-20)
+
+## 5. Your PART A code goes here
+
+
+# PART B - complete part B here
+
+
+window.exitonclick()urtle #1. import modules
 import random
 
 #Part A
@@ -12,15 +23,4 @@ leonardo.color('blue')
 michelangelo.shape('turtle')
 leonardo.shape('turtle')
 
-michelangelo.up() # 4. Pick up the pen so we don’t get lines
-leonardo.up()
-michelangelo.goto(-100,20)
-leonardo.goto(-100,-20)
-
-## 5. Your PART A code goes here
-
-
-# PART B - complete part B here
-
-
-window.exitonclick()
+michelangelo.up()
