@@ -68,12 +68,24 @@ pygame.time.wait(5000)
 
 
 #Part B:
-# window.fill("blue")
-# pygame.draw.rect(window, "black", center_of_screen, half_of_height) 
-# pygame.draw.(Window, "red")
-# pygame.draw
+window.fill("blue")
+pygame.draw.rect(window, "black", [screen_size[0]/7, screen_size[1]/3, 300, 300]) 
+pygame.draw.rect(window, "red", [screen_size[0]/6.4, screen_size[1]/2.85, 280, 280])
+pygame.draw.rect(window, "black", [screen_size[0]/1.7, screen_size[1]/3, 300, 300]) 
+pygame.draw.rect(window, "green", [screen_size[0]/1.67, screen_size[1]/2.85, 280, 280]) 
+font = pygame.font.Font(None, 60)
+text1 = font.render("Guess Who Wins The Dart Game!", True, "black")
+text2 = font.render("Please Select Your Player", True, "black")
+text3 = font.render("Player 1", True, "black")
+text4 = font.render("Player 2", True, "black")
+window.blit(text1, (80, half_of_height/3))
+window.blit(text2, (200, half_of_height/2))
+window.blit(text3, (screen_size[0]/4.5, screen_size[1]/2.1))
+window.blit(text4, (screen_size[0]/1.48, screen_size[1]/2.1))
+
+
 # while True:
-#     ...
+
 
 # for event in pygame.event.get():
 #     if event.type == pygame.:
@@ -84,5 +96,6 @@ pygame.time.wait(5000)
 #         font = pygame.font.Font(None, 48)
 #         text = font.render("Correct!", True, "black")
 #         window.blit(text, (half_of_width, half_of_height))
-# #pygame.display.flip()
+pygame.display.flip()
+pygame.time.wait(2000)
 
