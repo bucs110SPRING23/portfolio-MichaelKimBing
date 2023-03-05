@@ -83,19 +83,21 @@ window.blit(text2, (200, half_of_height/2))
 window.blit(text3, (screen_size[0]/4.5, screen_size[1]/2.1))
 window.blit(text4, (screen_size[0]/1.48, screen_size[1]/2.1))
 
+highlight_colors ={
+    "red": (255, 0, 0)
+    "green": (0,255,0)
+}
 
-# while True:
-
-
-# for event in pygame.event.get():
-#     if event.type == pygame.:
-#         font = pygame.font.Font(None, 48)
-#         text = font.render("Correct!", True, "black")
-#         window.blit(text, (half_of_width, half_of_height))
-#     elif event.type =/= pygame.:
-#         font = pygame.font.Font(None, 48)
-#         text = font.render("Correct!", True, "black")
-#         window.blit(text, (half_of_width, half_of_height))
+while True:
+for event in pygame.event.get():
+    if event.type == pygame.:
+        font = pygame.font.Font(None, 48)
+        text = font.render("Correct!", True, "black")
+        window.blit(text, (half_of_width, half_of_height))
+    elif event.type =/= pygame.:
+        font = pygame.font.Font(None, 48)
+        text = font.render("Correct!", True, "black")
+        window.blit(text, (half_of_width, half_of_height))
 pygame.display.flip()
 pygame.time.wait(2000)
 
