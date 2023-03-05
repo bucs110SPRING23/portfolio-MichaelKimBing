@@ -2,6 +2,8 @@ import random
 import pygame
 import math
 
+
+#Part A
 pygame.init()
 window = pygame.display.set_mode((800, 800))
 screen_size = window.get_size()
@@ -63,4 +65,24 @@ else:
     window.blit(text, (half_of_width, half_of_height))
 pygame.display.flip()
 pygame.time.wait(5000)
+
+
+#Part B:
+# window.fill("blue")
+# pygame.draw.rect(window, "black", center_of_screen, half_of_height) 
+# pygame.draw.(Window, "red")
+# pygame.draw
+# while True:
+#     ...
+
+# for event in pygame.event.get():
+#     if event.type == pygame.:
+#         font = pygame.font.Font(None, 48)
+#         text = font.render("Correct!", True, "black")
+#         window.blit(text, (half_of_width, half_of_height))
+#     elif event.type =/= pygame.:
+#         font = pygame.font.Font(None, 48)
+#         text = font.render("Correct!", True, "black")
+#         window.blit(text, (half_of_width, half_of_height))
+# #pygame.display.flip()
 
