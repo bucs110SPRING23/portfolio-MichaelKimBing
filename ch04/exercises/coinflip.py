@@ -9,7 +9,5 @@ heads = my_turtle.left(90)
 tails = my_turtle.right(90)
 coin_flip_forward = my_turtle.forward(50)
 
-while True:
-    for _ in 
 
 window.exitonclick()
