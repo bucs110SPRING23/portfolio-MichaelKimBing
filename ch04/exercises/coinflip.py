@@ -7,10 +7,9 @@ my_turtle.shape("turtle")
 my_turtle.color("blue")
 my_turtle.speed(0)
 distance = 10
-angle = 0 
+angle = 90
 is_in_screen = True
 
-flip = []
 while is_in_screen:
     coin = random.randint(0,1)
     if coin:
