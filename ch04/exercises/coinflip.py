@@ -27,4 +27,4 @@ while is_in_screen:
     if abs(turtleX) > x_range or abs(turtleY) > y_range:
         is_in_screen = False
 
-# window.exitonclick() <- you do not need this!
+# window.exitonclick() <- you do not need this!!!
