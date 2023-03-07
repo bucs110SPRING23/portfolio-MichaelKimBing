@@ -3,7 +3,6 @@ import pygame
 import math
 
 
-
 pygame.init()
 window = pygame.display.set_mode((800, 800))
 screen_size = window.get_size()
