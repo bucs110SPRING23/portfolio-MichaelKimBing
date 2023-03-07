@@ -112,8 +112,8 @@ elif amount_of_throws_hits_in_circle_player1 < amount_of_throws_hits_in_circle_p
         text2 = font.render(f"Player 2 Scores:{amount_of_throws_hits_in_circle_player2}", True, "black")
 else:
     text = font.render("Tie Game!", True, "black")
-    text1 = font.render(f"Player 1 Scores:", True, "black")
-    text2 = font.render(f"Player 2 Scores:", True, "black")
+    text1 = font.render(f"Player 1 Scores:{amount_of_throws_hits_in_circle_player1}", True, "black")
+    text2 = font.render(f"Player 2 Scores:{amount_of_throws_hits_in_circle_player2}", True, "black")
 window.blit(text, (half_of_width, half_of_height))
 window.blit(text1, (half_of_width, half_of_height/1.5))
 window.blit(text2, (half_of_width, half_of_height/1.3))
