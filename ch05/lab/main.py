@@ -13,7 +13,7 @@ def threenp1(n):
     return count
 
 def threenp1range(upper_limit):
-    objs_in_sequence = {}
+    objs_in_sequence = {threenp1()}
     for _ in range(3, upper_limit):
         threenp1()
         threenplus1_iters_dict = {}
