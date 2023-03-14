@@ -1,0 +1,11 @@
+print(10*5)
+print(10**2)
+print(15/10)
+print(15//10)
+print(-15//10)
+print(15%10)
+print(10%15)
+print(10%10)
+print(0%10)
+print(10/15)
+#The value of this last number is wrong since it is a float number and cuts off at this value because this answer is suppose to have a 6 repeating in the end.  But, it is cutting off somewhere since it cannot keep sending out infinite number of 6, even if it were a float number
