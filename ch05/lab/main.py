@@ -12,18 +12,17 @@ def threenp1(n):
             n = int(3 * n + 1)
     return count
 
-def threenp1range(n,upper_limit):
-    n = 2
-    objs_in_sequence = {}
-    for i in range(3, upper_limit):
-        threenp1()
-        objs_in_sequence.append(threenp1)
-    return n, upper_limit
+def threenp1range(upper_limit):
+    n = int(input("Enter A Number:"))
+    iters = threenp1(n)
+    objs_in_sequence = {n:iters}
+    return objs_in_sequence
 
 def main():
-    upper_limit = int(input("Enter a Limit Number:"))
-    threeplus1_itrs_dict = threenp1range()
-    print(threeplus1_itrs_dict)
+    for i in range(3, upper_limit):
+        threenp1()
+        threenplus1_iters_dictionary["n"] = "iterations"
+    return upper_limit
 
 main()
 
