@@ -16,13 +16,14 @@ def threenp1range(upper_limit):
     objs_in_sequence = {}
     for i in range(2,upper_limit):
         a = threenp1(i)
-        objs_in_sequence.update[{i:a}]
+        objs_in_sequence[i] = a
     return objs_in_sequence
     
 
 def main():
     upper_limit = int(input("Enter a Limit Number:"))
-    threenp1range(upper_limit)
+    threeplus1_iters_dict = threenp1range(upper_limit)
+    print(threeplus1_iters_dict)
     
 main()
 
