@@ -12,21 +12,17 @@ def threenp1(n):
             n = int(3 * n + 1)
     return count
 
-
 def threenp1range(upper_limit):
-    objs_in_sequence = {i:threenp1(n)} #suggestion
-    if upper_limit < 1:
-        return {}
-    threenp1()
-    objs_in_sequence.append(upper_limit)
+    objs_in_sequence = {}
+    for i in range(2,upper_limit):
+        a = threenp1(i)
+        objs_in_sequence.update[{i:a}]
     return objs_in_sequence
+    
 
 def main():
-    upper_limit = int(input("Please Enter a Limit Number:"))
-    for i in range(3,upper_limit):
-        threenp1(n)
-        threenp1range(n)
-        return main
+    upper_limit = int(input("Enter a Limit Number:"))
+    threenp1range(upper_limit)
     
 main()
 
