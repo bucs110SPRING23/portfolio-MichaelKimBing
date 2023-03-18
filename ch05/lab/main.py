@@ -34,16 +34,16 @@ def threenp1range(upper_limit):
 
 def graph_coordinates(threeplus1_iters_dict):
     pygame.init()
-    window = pygame.display.set_mode((800,800))
+    window = pygame.display.set_mode()
     window.fill("white")
     tuple_threeplus1_iters_dict = [(n,iters) for n, iters in threeplus1_iters_dict.items()]
 
 
-    pygame.draw.lines(window, "black", True, tuple_threeplus1_iters_dict, 5)
+    pygame.draw.lines(window, "black", True, tuple_threeplus1_iters_dict)
 
     new_display = pygame.transform.flip(window, False, True)
     width, height = new_display.get_size()
-    new_display = pygame.transform.scale(new_display, (width * 1, height * 1))
+    new_display = pygame.transform.scale(new_display, (width * 0.5, height * 0.5))
     window.blit(new_display, (0,0))
 
     iters_threeplus1_iters_dict = [tup[1] for tup in tuple_threeplus1_iters_dict]
@@ -60,10 +60,10 @@ def graph_coordinates(threeplus1_iters_dict):
 
     font = pygame.font.Font(None,36)
     msg = font.render(f"This is the Max Value from the 3n+1 function:{max_so_far}",True, "black")
-    window.blit(msg,(10,10))
+    window.blit(msg,(20,20))
 
     pygame.display.flip()
-    pygame.time.wait(10000)
+    pygame.time.wait(5000)
 
 
 def main():
