@@ -63,7 +63,7 @@ def graph_coordinates(threeplus1_iters_dict):
     window.blit(msg,(20,20))
 
     pygame.display.flip()
-    pygame.time.wait(5000)
+    pygame.time.wait(10000)
 
 
 def main():
