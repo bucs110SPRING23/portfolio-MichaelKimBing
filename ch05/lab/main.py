@@ -1,4 +1,4 @@
-
+import pygame
 
 
 #Part A
@@ -20,12 +20,69 @@ def threenp1range(upper_limit):
     return objs_in_sequence
     
 
+#Testing Part A
+# def main():
+#     upper_limit = int(input("Enter a Limit Number:"))
+#     threeplus1_iters_dict = threenp1range(upper_limit)
+#     print(threeplus1_iters_dict)
+    
+# main()
+
+
+
+#Part B:
+
+def graph_coordinates(threeplus1_iters_dict):
+    pygame.init()
+    window = pygame.display.set_mode((800,800))
+    window.fill("white")
+    tuple_threeplus1_iters_dict = [(n,iters) for n, iters in threeplus1_iters_dict.items()]
+
+
+    pygame.draw.lines(window, "black", False, tuple_threeplus1_iters_dict, 5)
+
+    new_display = pygame.transform.flip(window, False, True)
+    width, height = new_display.get_size()
+    new_display = pygame.transform.scale(new_display, (width * 5, height * 5))
+    window.blit(new_display, (0,0))
+
+
+    max_so_far = tuple_threeplus1_iters_dict[1]
+    for i in range(len(tuple_threeplus1_iters_dict)):
+        if tuple_threeplus1_iters_dict[i] > max_so_far:
+            max_so_far = tuple_threeplus1_iters_dict[i]
+
+    font = pygame.font.Font(None,36)
+    msg = font.render(f"This is the Max Value from the 3n+1 function:{max_so_far}",True, "black")
+    window.blit(msg,(10,10))
+
+    pygame.display.flip()
+    pygame.time.wait(5000)
+
+
 def main():
     upper_limit = int(input("Enter a Limit Number:"))
     threeplus1_iters_dict = threenp1range(upper_limit)
-    print(threeplus1_iters_dict)
-    
+    graph_coordinates(threeplus1_iters_dict)
+
 main()
+
+
+
+
+
+
+#Trying to find the max value
+# upper_limit = int(input("Enter a Limit Number:"))
+# threeplus1_iters_dict = threenp1range(upper_limit)
+# tuple_threeplus1_iters_dict = [(n,iters) for n, iters in threeplus1_iters_dict.items()]
+# max_so_far = tuple_threeplus1_iters_dict[0]
+
+# for i in range(len(tuple_threeplus1_iters_dict)):
+#      if tuple_threeplus1_iters_dict[i] > max_so_far:
+#         max_so_far = tuple_threeplus1_iters_dict[i]
+# print(max_so_far)
+    
 
 
 
