@@ -39,25 +39,31 @@ def graph_coordinates(threeplus1_iters_dict):
     tuple_threeplus1_iters_dict = [(n,iters) for n, iters in threeplus1_iters_dict.items()]
 
 
-    pygame.draw.lines(window, "black", False, tuple_threeplus1_iters_dict, 5)
+    pygame.draw.lines(window, "black", True, tuple_threeplus1_iters_dict, 5)
 
     new_display = pygame.transform.flip(window, False, True)
     width, height = new_display.get_size()
-    new_display = pygame.transform.scale(new_display, (width * 5, height * 5))
+    new_display = pygame.transform.scale(new_display, (width * 1, height * 1))
     window.blit(new_display, (0,0))
 
+    iters_threeplus1_iters_dict = [tup[1] for tup in tuple_threeplus1_iters_dict]
+    max_so_far = iters_threeplus1_iters_dict[1]
+    for i in range(len(iters_threeplus1_iters_dict)):
+        if iters_threeplus1_iters_dict[i] > max_so_far:
+            max_so_far = iters_threeplus1_iters_dict[i]
 
-    max_so_far = tuple_threeplus1_iters_dict[1]
-    for i in range(len(tuple_threeplus1_iters_dict)):
-        if tuple_threeplus1_iters_dict[i] > max_so_far:
-            max_so_far = tuple_threeplus1_iters_dict[i]
+    #If you want both the n:iters:
+    # max_so_far = threeplus1_iters_dict[1]
+    # for i in range(len(threeplus1_iters_dict)):
+    #     if iters_threeplus1_iters_dict[i] > max_so_far:
+    #         max_so_far = threeplus1_iters_dict[i]
 
     font = pygame.font.Font(None,36)
     msg = font.render(f"This is the Max Value from the 3n+1 function:{max_so_far}",True, "black")
     window.blit(msg,(10,10))
 
     pygame.display.flip()
-    pygame.time.wait(5000)
+    pygame.time.wait(10000)
 
 
 def main():
