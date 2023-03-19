@@ -92,25 +92,6 @@ main()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # def main():
 #     for i in range(3, upper_limit):
 #         threenp1()
