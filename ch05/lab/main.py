@@ -29,7 +29,6 @@ def threenp1range(upper_limit):
 # main()
 
 
-
 #Part B:
 
 def graph_coordinates(threeplus1_iters_dict):
