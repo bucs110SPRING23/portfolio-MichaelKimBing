@@ -59,8 +59,6 @@ def triangle_wave_function_range(limit_fighters):
 # main()
 
 
-
-
 #Drawing the Tie Fighters:
 
 
@@ -98,15 +96,9 @@ def tie_fighters(tie_fighters_dict):
         wings()
         my_turtle.penup()
         my_turtle.goto(tuple_position_tie_fighters)
-        my_turtle.goto(tuple_position_tie_fighters)
         my_turtle.pendown
-        my_turtle.begin_fill()
-        my_turtle.color("green") #grey color
-        my_turtle.circle(5)
-        my_turtle.end_fill
+        my_turtle.dot(5,"red")
         my_turtle.penup()
-
-
 
 
 #Laser:
@@ -137,9 +129,6 @@ def laser_graph_coordinates(threeplus1_iters_dict):
 
 
 
-
-
-
 #Drawing Planets:
 def death_star():
     # grey = (193,205,205)
@@ -154,7 +143,7 @@ def death_star():
         my_turtle.end_fill()
         for c in colors:
             my_turtle.color(c)
-            
+
 
 def random_planet():
     my_turtle.penup()
@@ -170,7 +159,7 @@ def random_planet():
 # Final Main
 def main():
     tie_fighters_dict = int(input("Deploy Tie Fighters:"))
-    threeplus1_iters_dict = 10000
+    threeplus1_iters_dict = 100000
     heavenly_body()
     death_star()
     random_planet()
