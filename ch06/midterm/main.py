@@ -97,7 +97,7 @@ def tie_fighters(tie_fighters_dict):
         my_turtle.penup()
         my_turtle.goto(tuple_position_tie_fighters)
         my_turtle.pendown
-        my_turtle.dot(5,"red")
+        my_turtle.dot(5,color = "red")
         my_turtle.penup()
 
 
@@ -126,7 +126,7 @@ def laser_graph_coordinates(threeplus1_iters_dict):
         my_turtle.color("green")
         my_turtle.gotto(250,250)
         my_turtle.pendown()
-
+    my_turtle.penup()
 
 
 #Drawing Planets:
