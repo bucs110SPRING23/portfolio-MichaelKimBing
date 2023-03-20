@@ -8,7 +8,7 @@ my_turtle = turtle.Turtle()
 my_turtle.shape("turtle")
 
 
-# #Drawing a single star
+#Drawing a single star
 def star():
     my_turtle.color("white")
     my_turtle.begin_fill()
@@ -18,7 +18,7 @@ def star():
     my_turtle.end_fill()
 
 
-# #Drawing a bunch of stars
+#Drawing a bunch of stars
 def heavenly_body():
     number_of_stars = 0
     while number_of_stars < 25:
@@ -30,11 +30,6 @@ def heavenly_body():
         my_turtle.pendown()
         my_turtle.speed(10)
         number_of_stars += 1
-
-
-
-
-
 
 #Function For Positions of Tie Fighters, generating random:
 
@@ -55,20 +50,35 @@ def triangle_wave_function_range(limit_fighters):
         coords_in_sequence[i] = a
     return coords_in_sequence
     
+# Test Dictionary:
+# def main():
+#     limit_fighters = int(input("Deploy Tie Fighters:"))
+#     triangle_wave_function_range_dict = triangle_wave_function_range(limit_fighters)
+#     print(triangle_wave_function_range_dict)
+
+# main()
+
+
 
 
 #Drawing the Tie Fighters:
 
-grey = (193, 205, 205)
 
-def tuple_tie_fighters(tie_fighters_dict):
-    tuple_limit_fighters = [(x,y) for x,y in tie_fighters_dict.items()]
-    return tuple_tie_fighters
+#Test Tuple:
+# def tie_fighters(tie_fighters_dict):
+#     tuple_position_tie_fighters = [(x,y) for x,y in tie_fighters_dict.items()]
+#     return tuple_position_tie_fighters
+# def main():
+#     limit_fighters = int(input("Deploly Tie Fighters:"))
+#     tie_fighters_dict = triangle_wave_function_range(limit_fighters)
+#     coord_tie_fighters = tuple_tie_fighters(tie_fighters_dict)
+#     print(coord_tie_fighters)
 
+# main()
 
 def wings():
     my_turtle.penup()
-    my_turtle.color(grey)
+    my_turtle.color("green") #grey color
     my_turtle.pendown()
     for i in range(3):
         my_turtle.forward(10)
@@ -78,23 +88,23 @@ def wings():
     my_turtle.left(90)
     
 
-def tie_fighters():
-    for i in range():
+def tie_fighters(tie_fighters_dict):
+    tuple_position_tie_fighters = (300,300)
+
+    #[(x,y) for x,y in tie_fighters_dict.items()]
+    
+    for i in range(len(tuple_position_tie_fighters)):
+        my_turtle.goto(tuple_position_tie_fighters)
+        wings()
         my_turtle.penup()
-        my_turtle.goto(tuple_tie_fighters)
+        my_turtle.goto(tuple_position_tie_fighters)
+        my_turtle.goto(tuple_position_tie_fighters)
         my_turtle.pendown
         my_turtle.begin_fill()
-        my_turtle.color(grey)
+        my_turtle.color("green") #grey color
         my_turtle.circle(5)
         my_turtle.end_fill
-        my_turtle.goto()
         my_turtle.penup()
-
-
-
-
-
-
 
 
 
@@ -132,20 +142,19 @@ def laser_graph_coordinates(threeplus1_iters_dict):
 
 #Drawing Planets:
 def death_star():
-    bright_grey = (169,169,169)
-    my_turtle.penup()
-    my_turtle.goto(300,300)
-    my_turtle.color(bright_grey)
-    my_turtle.pendown()
+    # grey = (193,205,205)
+    colors = ["red","green"]
+    for c in colors:
+        my_turtle.penup()
+        my_turtle.color(c)
+        my_turtle.pendown()
+    my_turtle.goto(300,0)
     my_turtle.begin_fill()
     my_turtle.circle(200)
     my_turtle.end_fill()
-    my_turtle.penup()
-    my_turtle.goto(250,250)
-    my_turtle.pendown()
     my_turtle.begin_fill()
+    my_turtle.goto(120,120)
     my_turtle.circle(50)
-    my_turtle.penup()
 
 def random_planet():
     my_turtle.penup()
@@ -153,18 +162,19 @@ def random_planet():
     my_turtle.color("blue")
     my_turtle.pendown()
     my_turtle.begin_fill()
-    my_turtle.circle()
+    my_turtle.circle(100)
     my_turtle.end_fill()
     my_turtle.penup()
 
 
 # Final Main
 def main():
-    limit_number_of_tie_fighters = int(input("Deploy Tie Fighters:"))
+    tie_fighters_dict = int(input("Deploy Tie Fighters:"))
     threeplus1_iters_dict = 10000
     heavenly_body()
     death_star()
     random_planet()
+    tie_fighters(tie_fighters_dict)
     laser_graph_coordinates(threeplus1_iters_dict)
 
 
