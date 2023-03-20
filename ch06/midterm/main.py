@@ -143,22 +143,22 @@ def laser_graph_coordinates(threeplus1_iters_dict):
 #Drawing Planets:
 def death_star():
     # grey = (193,205,205)
-    colors = ["red","green"]
-    for c in colors:
-        my_turtle.penup()
-        my_turtle.color(c)
-        my_turtle.pendown()
-    my_turtle.goto(300,0)
-    my_turtle.begin_fill()
-    my_turtle.circle(200)
-    my_turtle.end_fill()
-    my_turtle.begin_fill()
-    my_turtle.goto(120,120)
-    my_turtle.circle(50)
+    radius = [200,50]
+    colors = ["red","black"]
+    my_turtle.penup()
+    my_turtle.goto(-300,0)
+    my_turtle.pendown()
+    for r in radius:
+        my_turtle.begin_fill()
+        my_turtle.circle(r)
+        my_turtle.end_fill()
+        for c in colors:
+            my_turtle.color(c)
+            
 
 def random_planet():
     my_turtle.penup()
-    my_turtle.goto(-100,300)
+    my_turtle.goto(200,100)
     my_turtle.color("blue")
     my_turtle.pendown()
     my_turtle.begin_fill()
