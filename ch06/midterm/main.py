@@ -5,7 +5,6 @@ window = turtle.screensize()
 turtle.Screen().bgcolor("black")
 
 my_turtle = turtle.Turtle()
-my_turtle.shape("turtle")
 
 
 #Drawing a single star
@@ -145,7 +144,7 @@ def laser_graph_coordinates(threeplus1_iters_dict):
 def death_star():
     # grey = (193,205,205)
     radius = [200,50]
-    colors = ["red","black"]
+    colors = ["white","black"]
     my_turtle.penup()
     my_turtle.goto(-300,0)
     my_turtle.pendown()
@@ -181,7 +180,6 @@ def main():
     upper_limit = 100000
     threeplus1_iters_dict = shooting_laser(upper_limit)
     laser_graph_coordinates(threeplus1_iters_dict)
-
-
+    window.exitonclick()
 
 main()
