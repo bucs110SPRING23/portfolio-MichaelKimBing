@@ -79,6 +79,12 @@ main()
 
 
 
+
+
+
+
+# PLEASE IGNORE, THESE ARE EXTRA NOTES:
+
 #Trying to find the max value
 # upper_limit = int(input("Enter a Limit Number:"))
 # threeplus1_iters_dict = threenp1range(upper_limit)
