@@ -99,7 +99,6 @@ def death_star():
         for c in colors:
             my_turtle.color(c)
 
-
 def random_planet():
     my_turtle.penup()
     my_turtle.goto(200,100)
@@ -111,7 +110,7 @@ def random_planet():
     my_turtle.penup()
 
 
-# Final Main
+# Main
 def main():
     window = turtle.Screen()
     turtle.Screen().bgcolor("black")
@@ -130,5 +129,3 @@ def main():
     window.exitonclick()
 
 main()
-
-        
