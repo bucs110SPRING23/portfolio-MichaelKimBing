@@ -1,10 +1,8 @@
 import turtle
 import random
 
-window = turtle.screensize()
-turtle.Screen().bgcolor("black")
-
 my_turtle = turtle.Turtle()
+
 
 
 #Drawing a single star
@@ -29,122 +27,73 @@ def heavenly_body():
         my_turtle.pendown()
         my_turtle.speed(10)
         number_of_stars += 1
-
-#Function For Positions of Tie Fighters, generating random:
-
-def triangle_wave_function(x):
-    count = 0
-    while x > 1.0:
-        count +=1
-        if x % 2 == 0:
-            x = 0
-        else:
-            x = int(50 * x) #Question
-    return count
-
-def triangle_wave_function_range(limit_fighters):
-    coords_in_sequence = {}
-    for i in range(2,limit_fighters):
-        a = triangle_wave_function(i)
-        coords_in_sequence[i] = a
-    return coords_in_sequence
-    
-# Test Dictionary:
-# def main():
-#     limit_fighters = int(input("Deploy Tie Fighters:"))
-#     triangle_wave_function_range_dict = triangle_wave_function_range(limit_fighters)
-#     print(triangle_wave_function_range_dict)
-
-# main()
-
-
-#Drawing the Tie Fighters:
-
-
-# Test Tuple:
-# def tie_fighters(tie_fighters_dict):
-#     tuple_position_tie_fighters = [(x,y) for x,y in tie_fighters_dict.items()]
-#     return tuple_position_tie_fighters
-# def main():
-#     limit_fighters = int(input("Deploly Tie Fighters:"))
-#     tie_fighters_dict = triangle_wave_function_range(limit_fighters)
-#     coord_tie_fighters = tie_fighters(tie_fighters_dict)
-#     print(coord_tie_fighters)
-
-# main()
-
-def wings():  #condense this part
-    my_turtle.penup()
-    my_turtle.color("green") #grey color
-    my_turtle.pendown()
-    my_turtle.forward(100)
-    my_turtle.right(90)
-    my_turtle.forward(100)
-    my_turtle.backward(200)
-    my_turtle.penup()
-    my_turtle.home()
-    my_turtle.pendown()
-    my_turtle.left(180)
-    my_turtle.forward(100)
-    my_turtle.right(90)
-    my_turtle.forward(100)
-    my_turtle.backward(200)
-    
-
-def tie_fighters(my_turtle,tie_fighters_dict):
-    tuple_position_tie_fighters = [(x,y) for x,y in tie_fighters_dict.items()]
-    for g,z in tuple_position_tie_fighters:
-        my_turtle.goto(g,z)
-        my_turtle.dot(5, "red") #change to gray
-        wings()
-        my_turtle.penup
-
-# def tie_fighters(tie_fighters_dict):
-#     tuple_position_tie_fighters = [(x,y) for x,y in tie_fighters_dict.items()]
-#     my_turtle.penup()
-#     my_turtle.goto(500,400)
-#     for i in range(len(tuple_position_tie_fighters)):
-#         my_turtle.pendown
-#         i = tuple_position_tie_fighters
-#         my_turtle.goto(tuple_position_tie_fighters[i])
-#         my_turtle.dot(5,color = "red")
-#         wings()
-#         my_turtle.penup()
+    return number_of_stars
 
 
 #Laser:
-def threenp1(n):
-    count = 0
-    while n > 0:
-        count +=1
-        if n % 2 == 0:
-            n = int(n/2)
-        else:
-            n = int(3 * n + 1)
-    return count
-
-def shooting_laser(upper_limit):
-    objs_in_sequence = {}
-    for i in range(2,upper_limit):
-        a = threenp1(i)
-        objs_in_sequence[i] = a
-    return objs_in_sequence
-
-def laser_graph_coordinates(threeplus1_iters_dict):
-    tuple_threeplus1_iters_dict = [(n,iters) for n, iters in threeplus1_iters_dict.items()]
-    my_turtle.penup
-    for k,m in tuple_threeplus1_iters_dict:
-        my_turtle.goto(k,m)
-        my_turtle.color("green")
+def laser():
+    colors = ["blue","green"]
+    radius = []
+    for c in colors:
+        my_turtle.penup()
+        my_turtle.goto(-330,-20)
+        my_turtle.dot(60,c)
         my_turtle.pendown()
-        
+
+
+def laser_line(space,x,y):
+    my_turtle.penup()
+    my_turtle.goto(-330,0)
+    my_turtle.color("green")
+    my_turtle.pendown()
+    my_turtle.right(290)
+    for i in range(x):
+        for _ in range(y):
+            my_turtle.dot()
+            my_turtle.forward(space)
+            my_turtle.backward(space*y)
+    my_turtle.forward(space)
+    my_turtle.dot(100,"red")
+    my_turtle.penup()
+
+def explosion_function(w):
+    while w >= 0:
+        if w == 0:
+            w = 0
+        elif 1 <= w <= 3:
+            w = int(50000)
+        elif 4 <= w <= 6:
+            w = int(500000)
+        elif 7 <= w <= 10:
+            w = int(50000000* w)
+        else:
+            w = int(550000000)         
+        return w
+
+def explosion_function_range(intensity):
+    coords_in_sequence = {}
+    for i in range(0,intensity+1):
+        a = explosion_function(i)
+        coords_in_sequence[i] = a
+    return coords_in_sequence
+
+def casualities_number(numbers_of_people):
+    tuple_explosion = [(i,values) for i, values in numbers_of_people.items()]
+
+    values_explosion = [tup[1] for tup in tuple_explosion]
+    max_so_far = values_explosion[1]
+    for i in range(len(values_explosion)):
+        if values_explosion[i] > max_so_far:
+            max_so_far = values_explosion[i]
+    my_turtle.goto(-400,300)
+    my_turtle.color("yellow")
+    my_turtle.write(f"Number of Casualities:{max_so_far}",font=["None",36])
 
 
 #Drawing Planets:
 def death_star():
-    # grey = (193,205,205)
     radius = [200,50]
-    colors = ["white","black"]
+    colors = ["grey","black"]
     my_turtle.penup()
     my_turtle.goto(-300,0)
     my_turtle.pendown()
@@ -169,17 +118,21 @@ def random_planet():
 
 # Final Main
 def main():
-    limit_fighters = int(input("Deploy Tie Fighters:"))
+    window = turtle.screensize()
+    turtle.Screen().bgcolor("black")
+    intensity = int(input("Enter Explosion Intensity:"))
+    space = 10
+    x = 2
+    y = 5
     heavenly_body()
     death_star()
     random_planet()
-    tie_fighters_dict = triangle_wave_function_range(limit_fighters)
-    my_turtle = turtle.Turtle()
-    my_turtle.shape("turtle")
-    tie_fighters(my_turtle, tie_fighters_dict)
-    upper_limit = 100000
-    threeplus1_iters_dict = shooting_laser(upper_limit)
-    laser_graph_coordinates(threeplus1_iters_dict)
+    laser()
+    my_turtle.penup()
+    laser_line(space,x,y)
+    numbers_of_people = explosion_function_range(intensity)
+    casualities_number(numbers_of_people)
     window.exitonclick()
 
 main()
+        
