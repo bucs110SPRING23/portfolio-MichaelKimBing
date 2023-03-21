@@ -31,14 +31,23 @@ def heavenly_body():
 
 
 #Laser:
-def laser():
+def laser_generator():
     colors = ["blue","green"]
-    radius = []
+    radius = [60,20]
+    my_turtle.penup()
+    my_turtle.goto(-330,-20)
     for c in colors:
-        my_turtle.penup()
-        my_turtle.goto(-330,-20)
-        my_turtle.dot(60,c)
-        my_turtle.pendown()
+        for r in radius:
+            my_turtle.dot(r,c)
+    
+# def laser_generator():
+#     colors = ["blue","green"]
+#     radius = [60,]
+#     for c in colors:
+#         my_turtle.penup()
+#         my_turtle.goto(-330,-20)
+#         my_turtle.dot(60,c)
+#         my_turtle.pendown()
 
 
 def laser_line(space,x,y):
@@ -88,6 +97,7 @@ def casualities_number(numbers_of_people):
     my_turtle.goto(-400,300)
     my_turtle.color("yellow")
     my_turtle.write(f"Number of Casualities:{max_so_far}",font=["None",36])
+    
 
 
 #Drawing Planets:
@@ -118,7 +128,7 @@ def random_planet():
 
 # Final Main
 def main():
-    window = turtle.screensize()
+    window = turtle.Screen()
     turtle.Screen().bgcolor("black")
     intensity = int(input("Enter Explosion Intensity:"))
     space = 10
@@ -127,7 +137,7 @@ def main():
     heavenly_body()
     death_star()
     random_planet()
-    laser()
+    laser_generator()
     my_turtle.penup()
     laser_line(space,x,y)
     numbers_of_people = explosion_function_range(intensity)
@@ -135,4 +145,5 @@ def main():
     window.exitonclick()
 
 main()
+
         
