@@ -30,7 +30,6 @@ def threenp1range(upper_limit):
 
 
 #Part B:
-
 def graph_coordinates(threeplus1_iters_dict):
     pygame.init()
     window = pygame.display.set_mode((900,600))
@@ -61,10 +60,6 @@ def graph_coordinates(threeplus1_iters_dict):
     msg = font.render(f"This is the Max Value from the 3n+1 function:{max_so_far}",True, "black")
     window.blit(msg,(20,20))
 
-    # pygame.display.flip()
-    # pygame.time.wait(10000)
-
-
 def main():
     upper_limit = int(input("Enter a Limit Number:"))
     threeplus1_iters_dict = threenp1range(upper_limit)
@@ -73,45 +68,3 @@ def main():
     pygame.time.wait(10000)
 
 main()
-
-
-
-
-
-
-
-
-
-
-# PLEASE IGNORE, THESE ARE EXTRA NOTES:
-
-#Trying to find the max value
-# upper_limit = int(input("Enter a Limit Number:"))
-# threeplus1_iters_dict = threenp1range(upper_limit)
-# tuple_threeplus1_iters_dict = [(n,iters) for n, iters in threeplus1_iters_dict.items()]
-# max_so_far = tuple_threeplus1_iters_dict[0]
-
-# for i in range(len(tuple_threeplus1_iters_dict)):
-#      if tuple_threeplus1_iters_dict[i] > max_so_far:
-#         max_so_far = tuple_threeplus1_iters_dict[i]
-# print(max_so_far)
-    
-
-
-
-# def main():
-#     for i in range(3, upper_limit):
-#         threenp1()
-#         threenplus1_iters_dictionary["n"] = "iterations"
-#     return upper_limit
-
-# main()
-
-# if __name__ == "__main__":
-# main()
-
-
-
-        
-        
-    
