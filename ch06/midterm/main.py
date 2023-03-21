@@ -62,7 +62,7 @@ def explosion_function(w):
         elif 7 <= w <= 10:
             w = int(50000000* w)
         else:
-            w = int(550000000)         
+            w = int(5500000000)         
         return w
 
 def explosion_function_range(intensity):
