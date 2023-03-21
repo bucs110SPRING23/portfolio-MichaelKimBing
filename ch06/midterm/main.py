@@ -3,8 +3,6 @@ import random
 
 my_turtle = turtle.Turtle()
 
-
-
 #Drawing a single star
 def star():
     my_turtle.color("white")
@@ -33,23 +31,11 @@ def heavenly_body():
 #Laser:
 def laser_generator():
     colors = ["blue","green"]
-    radius = [60,20]
     my_turtle.penup()
     my_turtle.goto(-330,-20)
     for c in colors:
-        for r in radius:
-            my_turtle.dot(r,c)
+            my_turtle.dot(60,c)
     
-# def laser_generator():
-#     colors = ["blue","green"]
-#     radius = [60,]
-#     for c in colors:
-#         my_turtle.penup()
-#         my_turtle.goto(-330,-20)
-#         my_turtle.dot(60,c)
-#         my_turtle.pendown()
-
-
 def laser_line(space,x,y):
     my_turtle.penup()
     my_turtle.goto(-330,0)
@@ -98,7 +84,6 @@ def casualities_number(numbers_of_people):
     my_turtle.color("yellow")
     my_turtle.write(f"Number of Casualities:{max_so_far}",font=["None",36])
     
-
 
 #Drawing Planets:
 def death_star():
