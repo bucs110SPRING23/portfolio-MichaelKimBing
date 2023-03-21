@@ -88,7 +88,7 @@ def casualities_number(numbers_of_people):
 #Drawing Planets:
 def death_star():
     radius = [200,50]
-    colors = ["grey","black"]
+    colors = ["white","black"]
     my_turtle.penup()
     my_turtle.goto(-300,0)
     my_turtle.pendown()
