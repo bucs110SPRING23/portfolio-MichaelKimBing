@@ -1,8 +1,9 @@
+from rectangle import Rectangle
+
 class Surface:
     def __init__(self,filename,x,y,height,width):
-        self.rect
-        self.image
-        filename = 
+        self.rect = Rectangle(x,y,height,width)
+        self.image = filename
 
     def getRect(self):
-        return 
+        return self.rect

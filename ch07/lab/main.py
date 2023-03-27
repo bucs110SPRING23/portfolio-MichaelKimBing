@@ -1,9 +1,5 @@
-# import rectangle
 from rectangle import Rectangle
-
-# r = rectangle.Rectangle()
-# rectangle = Rectangle(10,10,10,10)
-
+from surface import Surface
 
 #Rectangle Test:
 r = Rectangle(10, 10, 10, 10)
@@ -17,4 +13,12 @@ assert((r.x, r.y, r.height, r.width) == (1,1,10,1))
 r = Rectangle(1, 1, 1, -1000)
 assert((r.x, r.y, r.height, r.width) == (1,1,1,1000))
 
-print(r)
+print(r,type(r))
+
+#Surface Test:
+s = Surface("myimage.png", 10, 10, 10, 10)
+assert((s.rect.x, s.rect.y, s.rect.height, s.rect.width) == (10,10,10,10))
+srect = s.getRect()
+assert(srect.x,  s.getRect().y, srect.height,  srect.width) == (10,10,10,10)
+assert s.image
+print("Test Complete!")
