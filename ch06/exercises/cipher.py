@@ -2,11 +2,10 @@ def caesar_cipher(text, shift):
     result = ""
     for char in text:
         if char.isalpha():
-            # Determine the case of the character
-            start = ord('A') if char.isupper() else ord('a')
-            # Calculate the new position of the character after the shift
-            new_pos = (ord(char) - start + shift) % 26
-            # Convert the new position back to a character
+            start = ord('A') if char.isupper() else ord('j')
+            new_pos = (ord(char) - start + shift) % 2 + 39
             char = chr(start + new_pos)
         result += char
     return result
+
+print(caesar_cipher("The quick brown fox jumps over the lazy dog",3))
