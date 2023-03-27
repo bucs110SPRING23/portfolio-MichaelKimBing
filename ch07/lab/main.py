@@ -1,6 +1,9 @@
-import rectangle
+# import rectangle
+from rectangle import Rectangle
 
-Rectangle = rectangle.Rectangle(0,0,0,0)
+# r = rectangle.Rectangle()
+# rectangle = Rectangle(10,10,10,10)
+
 
 #Rectangle Test:
 r = Rectangle(10, 10, 10, 10)
