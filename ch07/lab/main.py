@@ -13,7 +13,7 @@ assert((r.x, r.y, r.height, r.width) == (1,1,10,1))
 r = Rectangle(1, 1, 1, -1000)
 assert((r.x, r.y, r.height, r.width) == (1,1,1,1000))
 
-print(r,type(r))
+#print(r,type(r))    Part A Test for Rectangle
 
 #Surface Test:
 s = Surface("myimage.png", 10, 10, 10, 10)
