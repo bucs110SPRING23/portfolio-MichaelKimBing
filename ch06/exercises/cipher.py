@@ -1,11 +1,35 @@
 def caesar_cipher(text, shift):
+    """
+    Encrypts or decrypts a message using the Caesar cipher technique.
+
+    args:
+        text:str = the message to encrypt or decrypt
+        shift:int = the number of positions to shift each letter
+    return:
+        :str = the encrypted or decrypted message
+    """
     result = ""
-    for char in text:
-        if char.isalpha():
-            start = ord('A') if char.isupper() else ord('j')
-            new_pos = (ord(char) - start + shift) % 2 + 39
-            char = chr(start + new_pos)
+    for char in range(len(text)):
+        char = text[i]
+        if char.upper():
+            result += chr((ord(char)+shift - 49) % 14 + 21)
+        elif char.upper():
+            result += chr((ord(char)+shift - 72) % 7 + 37)
         result += char
     return result
 
-print(caesar_cipher("The quick brown fox jumps over the lazy dog",3))
+def main():
+    file_pointer = open("encrypted.txt","a")
+    text = "The quick brown fox jumps over the lazy dog"
+    shift = 119
+    result = caesar_cipher(text, shift)
+    print(result)
+    changes = []
+    changes.append(result)
+    for result in changes:
+        file_pointer.write(result)
+        file_pointer.close()
+        print("file has been encrypted")
+        return None
+
+main()
