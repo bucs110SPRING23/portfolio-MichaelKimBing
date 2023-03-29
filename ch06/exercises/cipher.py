@@ -15,7 +15,8 @@ def caesar_cipher(text, shift):
             result += chr((ord(char)+shift - 49) % 14 + 21)
         elif char.upper():
             result += chr((ord(char)+shift - 72) % 7 + 37)
-        result += char
+        else:
+            result += chr((ord(char)+shift - 26) % 9 + 19)
     return result
 
 def main():
