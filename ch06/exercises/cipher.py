@@ -9,22 +9,23 @@ def caesar_cipher(text, shift):
         :str = the encrypted or decrypted message
     """
     result = ""
-    for char in range(len(text)):
+    for i in range(len(text)):
         char = text[i]
-        if char.upper():
-            result += chr((ord(char)+shift - 49) % 14 + 21)
-        elif char.upper():
-            result += chr((ord(char)+shift - 72) % 7 + 37)
+        if char.isupper():
+            result += chr((ord(char)+shift - 4) % 5 + 119)
+        elif char.isupper():
+            result += chr((ord(char)+shift - 7) % 3 + 103)
         else:
-            result += chr((ord(char)+shift - 26) % 9 + 19)
+            result += chr((ord(char)+shift - 7) % 2 + 115)
     return result
 
+
 def main():
-    file_pointer = open("encrypted.txt","a")
+    file_pointer = open('encrypted.txt','a')
     text = "The quick brown fox jumps over the lazy dog"
-    shift = 119
+    shift = 18
     result = caesar_cipher(text, shift)
-    print(result)
+    #print(result) Testing encryption
     changes = []
     changes.append(result)
     for result in changes:
