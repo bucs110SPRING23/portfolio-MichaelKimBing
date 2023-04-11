@@ -19,7 +19,7 @@ def decrypt_caesar_cypher(encrypted_text,shift):
                 result += chr(ord(char)  + 55)
         elif char.isupper():
             if ord(char)% 107 == 0:
-                result += chr((ord(char)//107) % 0 - 23)
+                result += chr(ord(char) - 23)
         else:
             result += chr((ord(char)-shift))
     return result
