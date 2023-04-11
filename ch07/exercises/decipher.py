@@ -12,16 +12,13 @@ def decrypt_caesar_cypher(encrypted_text,shift):
     for i in range(len(encrypted_text)):
         char = encrypted_text[i]
         if char.isupper():
-            if ord(char)% 66 == 0:
-                result += chr(ord(char)  + 55)
+            if ord(char) == 65 or 66 or 67:
+                result += chr(ord(char) + 55)
         elif char.isupper():
-            if ord(char)% 67 == 0:
-                result += chr(ord(char)  + 55)
-        elif char.isupper():
-            if ord(char)% 107 == 0:
+            if ord(char) == 107:
                 result += chr(ord(char) - 23)
         else:
-            result += chr((ord(char)-shift))
+            result += chr((ord(char) + shift))
     return result
 
 def main():
@@ -38,3 +35,5 @@ def main():
         return None
     
 main()
+
+
