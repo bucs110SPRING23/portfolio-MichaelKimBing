@@ -13,7 +13,7 @@ def decrypt_caesar_cypher(encrypted_text,shift):
         char = encrypted_text[i]
         if char.islower():
             result += chr(ord(char) - 23)
-        if char.isupper():
+        elif char.isupper():
             if ord(char) == 65:
                 result += chr(ord(char) + 55)
             elif ord(char) == 66:
@@ -24,6 +24,8 @@ def decrypt_caesar_cypher(encrypted_text,shift):
                 result += chr(ord(char) - 23)
             else:
                 result += chr((ord(char) + shift))
+        else:
+            result += chr(32)
         # if char.isupper():
             # if ord(char) == 65 and 66 and 67:
             #     result += chr(ord(char) + 55)
@@ -35,9 +37,10 @@ def decrypt_caesar_cypher(encrypted_text,shift):
 
 def main():
     file_pointer = open('decrypted.txt','a')
-    encrypted_text = "kKH TXLFN EURZQ IRA MXPSV RYHU WKH ODCB GRJ"
+    encrypted_text = 'kKH TXLFN EURZQ IRA MXPSV RYHU WKH ODCB GRJ'
     shift = 29
     result = decrypt_caesar_cypher(encrypted_text, shift)
+    print(result)
     changes = []
     changes.append(result)
     for result in changes:
