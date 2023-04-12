@@ -32,7 +32,7 @@ def threenp1range(upper_limit):
 #Part B:
 def graph_coordinates(threeplus1_iters_dict):
     pygame.init()
-    window = pygame.display.set_mode((900,600))
+    window = pygame.display.set_mode((900,700))
     window.fill("white")
     tuple_threeplus1_iters_dict = [(n,iters) for n, iters in threeplus1_iters_dict.items()]
 
