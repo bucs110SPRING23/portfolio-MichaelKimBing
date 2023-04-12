@@ -41,7 +41,7 @@ def graph_coordinates(threeplus1_iters_dict):
 
     new_display = pygame.transform.flip(window, False, True)
     width, height = new_display.get_size()
-    new_display = pygame.transform.scale(new_display, (width * 1.5, height * 1.5))
+    new_display = pygame.transform.scale(new_display, (width * 1, height * 1))
     window.blit(new_display, (0,0))
 
     iters_threeplus1_iters_dict = [tup[1] for tup in tuple_threeplus1_iters_dict]
