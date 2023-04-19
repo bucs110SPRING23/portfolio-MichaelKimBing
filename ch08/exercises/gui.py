@@ -32,7 +32,7 @@ class Tube:
         """
         Initializes the tube transport
         """
-        self.color = "green"
+        self.color = (200, 200, 250)
         self.position = (300, 300)
         self.access_tube = True
 
