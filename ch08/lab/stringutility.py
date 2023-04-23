@@ -32,9 +32,14 @@ class StringUtility:
     
 
     def fixStart(self):
-        a = self.string[1:]
-        a.replace(self.string[0], "*")
-        return self.string[0]+a
+        fixstart_string = self.string
+        if len(fixstart_string) <= 1:
+            return fixstart_string
+        first_character = self.string[0]
+        replaced_string = self.string.replace(first_character, '*')
+        replaced_string = first_character + replaced_string[1:]
+        return replaced_string
+
 
     def asciiSum(self):
         asciisum_string = self.string
@@ -47,14 +52,11 @@ class StringUtility:
         cipher_text = self.string
         length_cipher = len(cipher_text)
         encrypted_text = ''
-        for i in cipher_text:
-            if i.isupper():
-                encrypted_text += chr((ord(i) + length_cipher - 84) % 15 + 37)
+        for char in cipher_text:
+            if char.isupper():
+                encrypted_text += chr((ord(char) + length_cipher - 65) % 26 + 65)
+            elif char.islower():
+                encrypted_text += chr((ord(char) + length_cipher - 97) % 26 + 97)
             else:
-                encrypted_text += chr((ord(i) + length_cipher - 95) % 14 + 19)
+                encrypted_text += chr(ord(char))
         return encrypted_text
-
-
-
-
-        
