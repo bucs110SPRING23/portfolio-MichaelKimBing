@@ -4,7 +4,6 @@ class StringUtility:
     def __str__(self):
         return self.string
     
-
     def vowels(self):
         count = 0
         vowel_test_string = self.string
@@ -19,8 +18,7 @@ class StringUtility:
             return str("many")
         else:
             return str(count)
-        
-        
+            
     def bothEnds(self):
         bothends_test_string = self.string
 
@@ -29,7 +27,6 @@ class StringUtility:
         
         bothends_string = bothends_test_string[0] + bothends_test_string[1] + bothends_test_string[-2] + bothends_test_string[-1] 
         return bothends_string
-    
 
     def fixStart(self):
         fixstart_string = self.string
@@ -40,14 +37,13 @@ class StringUtility:
         replaced_string = first_character + replaced_string[1:]
         return replaced_string
 
-
     def asciiSum(self):
         asciisum_string = self.string
         ascii_value = 0
         for i in asciisum_string:
             ascii_value += ord(i)
         return ascii_value
-    
+
     def cipher(self):
         cipher_text = self.string
         length_cipher = len(cipher_text)
