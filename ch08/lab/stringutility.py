@@ -56,3 +56,9 @@ class StringUtility:
             else:
                 encrypted_text += chr(ord(char))
         return encrypted_text
+    
+
+# EXTRA CREDIT:
+    # def FusionClass(self):
+    #     combined_classes = "/n".join(map(self, string))
+    #     return combined_classes
