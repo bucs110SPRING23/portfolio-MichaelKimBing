@@ -46,13 +46,19 @@ class StringUtility:
 
     def cipher(self):
         cipher_text = self.string
-        length_cipher = len(cipher_text)
         encrypted_text = ''
+        length_cipher = len(cipher_text)
         for char in cipher_text:
             if char.isupper():
-                encrypted_text += chr((ord(char) + length_cipher - 65) % 26 + 65)
+                first_step = ord(char) + length_cipher
+                second_step = first_step - 65
+                third_step = second_step % 26
+                encrypted_text += chr(third_step + 65)
             elif char.islower():
-                encrypted_text += chr((ord(char) + length_cipher - 97) % 26 + 97)
+                first_step = ord(char) + length_cipher
+                second_step = first_step - 97
+                third_step = second_step % 26
+                encrypted_text += chr(third_step + 97)
             else:
                 encrypted_text += chr(ord(char))
         return encrypted_text
@@ -60,5 +66,5 @@ class StringUtility:
 
 # EXTRA CREDIT:
     # def FusionClass(self):
-    #     combined_classes = "/n".join(map(self, string))
-    #     return combined_classes
+    #     result = "\n".join(str(self.string) for i in self.string)
+    #     return result
