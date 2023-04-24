@@ -50,15 +50,9 @@ class StringUtility:
         length_cipher = len(cipher_text)
         for char in cipher_text:
             if char.isupper():
-                first_step = ord(char) + length_cipher
-                second_step = first_step - 65
-                third_step = second_step % 26
-                encrypted_text += chr(third_step + 65)
+                encrypted_text += chr((ord(char) + length_cipher - 65) % 26 + 65)
             elif char.islower():
-                first_step = ord(char) + length_cipher
-                second_step = first_step - 97
-                third_step = second_step % 26
-                encrypted_text += chr(third_step + 97)
+                encrypted_text += chr((ord(char) + length_cipher - 97) % 26 + 97)
             else:
                 encrypted_text += chr(ord(char))
         return encrypted_text
