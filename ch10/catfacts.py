@@ -10,4 +10,4 @@ class CatfactsAPI:
         url = self.url + self.amount
         response = requests.get(url)
         data = response.json()
-        return data ['results']
+        return data

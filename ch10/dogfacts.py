@@ -9,4 +9,4 @@ class DogfactsAPI:
         url = self.url
         response = requests.get(url)
         data = response.json()
-        return data ['results']
+        return data
