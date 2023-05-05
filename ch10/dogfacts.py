@@ -6,9 +6,6 @@ class DogfactsAPI:
         self.url = "http://dog-api.kinduff.com/api/facts"
     
     def __str__(self):
-        pass
-
-    def get(self):
         url = self.url
         response = requests.get(url)
         data = response.json()
