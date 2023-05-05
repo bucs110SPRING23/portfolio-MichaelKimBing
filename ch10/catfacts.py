@@ -3,14 +3,14 @@ import requests
 class CatfactsAPI:
 
     def __init__(self):
-        self.url = "https://meowfacts.herokuapp.com/?"
+        self.api_url = "https://meowfacts.herokuapp.com/?"
         self.amount = "count=1"
 
-    def __str__(self):
-        pass
-    
     def get(self):
-        url = self.url + self.amount
+        url = self.api_url + self.amount
         response = requests.get(url)
         data = response.json()
-        return data
+        self.data = data
+
+    def __str__(self):
+        return self.data
