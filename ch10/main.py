@@ -1,12 +1,10 @@
 from cryptoprice import Cryptoprice
 from exchangerate import Exchangerate
-import math
 
 def main():
     cryptostats = Cryptoprice()
     state = True
 
-    
     while state:
         print("Hello, Would You Like To See The Current Status Of Bitcoin?")
         answer_to__question = int(input('Please Input 0 for Yes or 1 for No:'))
