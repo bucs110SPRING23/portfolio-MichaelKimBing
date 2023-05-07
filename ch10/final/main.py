@@ -2,6 +2,11 @@ from cryptoprice import Cryptoprice
 from exchangerate import Exchangerate
 
 def main():
+    """
+    Initializes all of the call classes into the main
+    arguments: None
+    return: API requested information
+    """
     cryptostats = Cryptoprice()
     exchangeratetoday = Exchangerate()
     state = True
