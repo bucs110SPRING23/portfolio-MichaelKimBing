@@ -5,7 +5,7 @@ class Exchangerate:
     def __init__(self):
         self.api_url = f"https://api.exchangerate.host/latest?base=USD"
 
-    def get(self):
+    def get(self, amount):
         r = requests.get(f'{self.api_url}&{amount}')
         response = r.json()
         exchange_dict = response
