@@ -10,7 +10,7 @@
 ## There might be an instance where the user may want to put the decimals after the third question is asked, but it was asked by the system to put in whole numbers.  Also the exchange rates and the values may show up as having more decimal places as that is how the two AI's were built to record the values of the bitcoin and the exchange.
 
 ## REFERENCES *(any resources you use outside of class materials)*
-## Nested Dictionaries - https://www.programiz.com/python-programming/nested-dictionary
+## To check a dictionary within another dictionary - Nested Dictionaries - https://www.programiz.com/python-programming/nested-dictionary
 
 ## MISCELLANEOUS COMMENTS *(anything else you would like the grader to know)*
 ##  When the program asks for the amount you wish to exchange, there might be a mean message in the end if you input a value less than or equal to 0.  Apologies for this custom message.
