@@ -13,4 +13,4 @@
 ## Nested Dictionaries - https://www.programiz.com/python-programming/nested-dictionary
 
 ## MISCELLANEOUS COMMENTS *(anything else you would like the grader to know)*
-##  When the program asks for the amount you wish to exchange, there might be a mean message in the end if you input a value less than 0.  Apologies for this custom message.
+##  When the program asks for the amount you wish to exchange, there might be a mean message in the end if you input a value less than or equal to 0.  Apologies for this custom message.
