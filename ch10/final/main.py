@@ -3,6 +3,7 @@ from exchangerate import Exchangerate
 
 def main():
     cryptostats = Cryptoprice()
+    exchangeratetoday = Exchangerate()
     state = True
 
     while state:
@@ -18,7 +19,7 @@ def main():
                     print("You Have Sold Your Bitcoin")
                     amount = int(input('Please Type In The Value Of Your Bitcoin To View Exchange Rates(ONLY DOLLAR BILLS ACCEPTED NO CENTS):'))
                     if amount > 0:
-                        exchangeratetoday = Exchangerate(amount)
+                        exchangeratetoday.get(amount)
                         print(exchangeratetoday)
                         state = False
                     else:
